@@ -92,8 +92,7 @@ public class ColorController extends ContentObserver
         mColorType = Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.PULSE_COLOR_MODE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
         mColor = Settings.Secure.getIntForUser(resolver,
-                Settings.Secure.PULSE_COLOR_USER,
-                getAccentColor(),
+                Settings.Secure.PULSE_COLOR_USER, 0xFFFFFFFF,
                 UserHandle.USER_CURRENT);
         int lava_speed = Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.PULSE_LAVALAMP_SPEED, LAVA_LAMP_SPEED_DEF,
